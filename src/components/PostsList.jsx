@@ -12,7 +12,7 @@ function PostsList({ isPosting, onStopPosting }) {
 	useEffect(() => {
 		async function fetchPosts() {
 			setLoading(true);
-			const response = await fetch('https://sample-backend-j5fi722gi-ilyje-rivas-projects.vercel.app/');
+			const response = await fetch('https://sample-backend-ten.vercel.app/');
 
 			const resData = await response.json();
 			setPosts(resData.posts);
@@ -25,7 +25,7 @@ function PostsList({ isPosting, onStopPosting }) {
 	function addPostHandler(postData) {
 		async function addPost() {
 			setLoading(true);
-			await fetch('https://sample-backend-j5fi722gi-ilyje-rivas-projects.vercel.app/', {
+			await fetch('https://sample-backend-ten.vercel.app/', {
 
 				method: 'POST',
 				headers: {
